@@ -15,7 +15,7 @@ func main() {
 			if val, key := charCounter[string(char)]; key {
 				charCounter[string(char)] = val + 1
 			} else {
-				charCounter[string(char)] = 1		
+				charCounter[string(char)] = 1
 			}
 		}
 

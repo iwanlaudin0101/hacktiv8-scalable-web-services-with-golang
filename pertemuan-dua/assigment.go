@@ -9,15 +9,17 @@ func main() {
 
 		if i == 4 {
 			for j := 0; j <= 10; j++ {
-				fmt.Println("Nilai j =", j)
 
-				if j == 4 {
-					character := []rune{'С','А','Ш','А','Р','В','О'}
+				if j == 5 {
+					character := "САШАРВО"
 					for i, char := range character {
-						fmt.Printf("character %U ", char)
-						fmt.Printf("'%s' starts at byte position %d\n", []byte(string(char)), i*2)
+						fmt.Printf("character %U %q starts at byte position %d\n", char, char, i)
 					}
+
+					continue
 				}
+
+				fmt.Println("Nilai j =", j)
 			}
 		}
 	}
