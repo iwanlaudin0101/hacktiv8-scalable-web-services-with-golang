@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	
-	days := [...]string{"Senin","Selasa","Rabu","Kamis","Jumat","Sabtu","Minggu"}
+
+	days := [...]string{"Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"}
 	fmt.Println(days)
 	daySlice := days[5:]
 	daySlice[0] = "Sabtu Baru"
