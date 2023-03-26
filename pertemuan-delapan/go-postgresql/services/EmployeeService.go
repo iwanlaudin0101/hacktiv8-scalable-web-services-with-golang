@@ -50,7 +50,7 @@ func GetEmployee(db *sql.DB) []models.Employee {
 	return result
 }
 
-func UpdateEmployee(db *sql.DB, id int, name string, email string, age int, devision string) int64 {
+func UpdateEmployee(db *sql.DB, id int, name string, email string, age int, devision string) string {
 	sql := `
 	UPDATE "Employee"
 		SET "FullName" = $2, "Email" = $3, "Age" = $4, "Devision" = $5
@@ -67,7 +67,11 @@ func UpdateEmployee(db *sql.DB, id int, name string, email string, age int, devi
 		panic(err)
 	}
 
-	return count
+	if count < 1 {
+		return "Gagal mengubah data!"
+	}
+
+	return "Berhasil mengubah data!"
 }
 
 func DeleteEmployee(db *sql.DB, id int) string {
