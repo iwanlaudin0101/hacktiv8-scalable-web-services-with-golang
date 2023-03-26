@@ -1,10 +1,15 @@
 package config
 
-import (
-	"fmt"
-)
+import "fmt"
 
 const (
+	// api config
+	APIPORT = ":4000"
+
+	// web config
+	WEBPORT = ":5001"
+
+	// database config
 	host     = "localhost"
 	port     = "5432"
 	user     = "postgres"
